@@ -90,6 +90,7 @@ nav {
     box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
 }
 
+/* Estilo mejorado para enlace activo */
 .nav-menu a.active {
     background-color: #4CAF50;
     color: white;
@@ -97,6 +98,9 @@ nav {
     font-weight: 700;
     box-shadow: 0 2px 8px rgba(76, 175, 80, 0.5);
     transform: translateY(-1px);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
 }
 
 .nav-menu a.active::after {
@@ -301,6 +305,11 @@ footer {
         font-size: 0.9em;
     }
     
+    .nav-menu a.active {
+        text-underline-offset: 2px;
+        text-decoration-thickness: 1.5px;
+    }
+    
     .nav-menu a.active::after {
         width: 60%;
         height: 1.5px;
@@ -379,6 +388,11 @@ footer {
     .nav-menu a {
         padding: 5px 10px;
         font-size: 0.85em;
+    }
+    
+    .nav-menu a.active {
+        text-underline-offset: 1px;
+        text-decoration-thickness: 1px;
     }
     
     .nav-menu a.active::after {
