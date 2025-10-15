@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-image: url('../tp2-nudelman-castiglione_ferniot/assets/imagenes/PARQUE-INDEX.jpg');
+    background-image: url('../assets/imagenes/PARQUE-INDEX.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -19,77 +19,78 @@ body {
 
 /* Header */
 header {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(5px);
-    border-bottom: 3px solid #356235;
+    background-color: transparent;
+    border-bottom: none;
 }
 
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    padding: 20px;
+    padding: 15px 20px;
+    background-color: #356235;
+    backdrop-filter: blur(5px);
 }
 
 .header-title {
-    color: #356235;
-    font-size: 2.5em;
+    color: white;
+    font-size: 2.2em;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .header-subtitle {
-    color: #356235;
-    font-size: 1.1em;
-    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1em;
+    margin-bottom: 15px;
     font-style: italic;
-    font-weight: 500;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Navegación */
 nav {
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .nav-menu {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     flex-wrap: wrap;
-    padding: 10px 0;
+    padding: 8px 0;
 }
 
 .nav-menu li {
-    margin: 5px 0;
+    margin: 3px 0;
 }
 
 .nav-menu a {
     text-decoration: none;
-    color: #356235;
+    color: white;
     font-weight: 600;
-    padding: 10px 18px;
+    padding: 8px 15px;
     border-radius: 6px;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
-    font-size: 1em;
-    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.95em;
+    background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(3px);
 }
 
 .nav-menu a:hover {
-    background-color: #356235;
+    background-color: #4CAF50;
     color: white;
-    border-color: #356235;
+    border-color: #4CAF50;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(53, 98, 53, 0.3);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
 }
 
 .nav-menu a:active {
-    background-color: #4CAF50;
+    background-color: #3A6B8C;
 }
 
 /* Banner */
@@ -240,18 +241,29 @@ footer {
         background-attachment: scroll;
     }
     
+    .header-content {
+        padding: 12px 15px;
+    }
+    
     .header-title {
-        font-size: 2em;
+        font-size: 1.8em;
         letter-spacing: 1px;
+        margin-bottom: 4px;
+    }
+    
+    .header-subtitle {
+        font-size: 0.9em;
+        margin-bottom: 12px;
     }
     
     .nav-menu {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
     
     .nav-menu a {
-        padding: 8px 15px;
+        padding: 6px 12px;
+        font-size: 0.9em;
     }
     
     .banner {
@@ -289,21 +301,27 @@ footer {
         background-size: cover;
     }
     
+    .header-content {
+        padding: 10px 12px;
+    }
+    
     .header-title {
-        font-size: 1.6em;
+        font-size: 1.5em;
+        margin-bottom: 3px;
     }
     
     .header-subtitle {
-        font-size: 1em;
+        font-size: 0.85em;
+        margin-bottom: 10px;
     }
     
     .nav-menu {
-        gap: 10px;
+        gap: 8px;
     }
     
     .nav-menu a {
-        padding: 6px 12px;
-        font-size: 0.9em;
+        padding: 5px 10px;
+        font-size: 0.85em;
     }
     
     .banner {
