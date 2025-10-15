@@ -90,7 +90,6 @@ nav {
     box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
 }
 
-/* Estilo para enlace activo */
 .nav-menu a.active {
     background-color: #4CAF50;
     color: white;
@@ -145,9 +144,9 @@ main {
     margin: 0 auto 40px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 0;
     align-items: start;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #91B3C4;
     backdrop-filter: blur(10px);
     border-radius: 10px;
     overflow: hidden;
@@ -196,7 +195,7 @@ main {
 
 .texto {
     padding: 30px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: #91B3C4;
     backdrop-filter: blur(8px);
 }
 
@@ -232,9 +231,10 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 20px;
+    position: relative;
 }
 
 .footer-text {
@@ -242,6 +242,7 @@ footer {
     font-size: 0.95em;
     font-weight: 500;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    text-align: center;
 }
 
 .footer-icon {
@@ -257,6 +258,8 @@ footer {
     font-weight: bold;
     transition: all 0.3s ease;
     border: 2px solid #356235;
+    position: absolute;
+    right: 20px;
 }
 
 .footer-icon:hover {
@@ -310,7 +313,7 @@ footer {
     .informacion {
         grid-template-columns: 1fr;
         gap: 0;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: #91B3C4;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     }
     
@@ -322,6 +325,7 @@ footer {
     .imagen-parque {
         padding: 15px;
         min-height: 280px;
+        background-color: #91B3C4;
     }
     
     .parque-img {
@@ -330,13 +334,19 @@ footer {
     
     .texto {
         padding: 25px;
-        background-color: rgba(255, 255, 255, 0.98);
+        background-color: #91B3C4;
     }
     
     .footer-content {
         flex-direction: column;
         gap: 15px;
         text-align: center;
+        position: relative;
+    }
+    
+    .footer-icon {
+        position: static;
+        margin-top: 10px;
     }
 }
 
@@ -387,6 +397,7 @@ footer {
     .imagen-parque {
         padding: 12px;
         min-height: 250px;
+        background-color: #91B3C4;
     }
     
     .parque-img {
@@ -395,10 +406,19 @@ footer {
     
     .texto {
         padding: 20px;
-        background-color: rgba(255, 255, 255, 0.98);
+        background-color: #91B3C4;
     }
     
     .texto h2 {
         font-size: 1.3em;
+    }
+    
+    .footer-content {
+        position: relative;
+    }
+    
+    .footer-icon {
+        position: static;
+        margin-top: 10px;
     }
 }
