@@ -134,6 +134,7 @@ nav {
     filter: brightness(0.7) contrast(1.2);
     opacity: 0.4;
 }
+/*hago bordes redondos mapa*/
 
 /* Main - sin fondo beige */
 main {
@@ -251,6 +252,19 @@ main {
     text-align: justify;
     text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.8);
     font-weight: 500;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.mapa iframe {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd;
 }
 
 /* Footer */
