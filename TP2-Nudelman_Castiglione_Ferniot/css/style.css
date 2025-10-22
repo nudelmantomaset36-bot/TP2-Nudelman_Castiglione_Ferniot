@@ -168,12 +168,42 @@ main {
 }
 
 .informacion:nth-child(even) .imagen-parque {
-    order: 2;
     padding-top: 30px;
 }
 
 .informacion:nth-child(even) .texto {
-    order: 1;
+}
+
+
+.informacion1 {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: start;
+    background-color: #91B3C4;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.informacion1:last-child {
+    margin-bottom: 0;
+}
+
+/* Alternar orden en secciones pares */
+.informacion1:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+}
+
+.informacion1:nth-child(even) .imagen-parque {
+    padding-top: 30px;
+}
+
+.informacion1:nth-child(even) .texto {
 }
 
 .imagen-parque {
