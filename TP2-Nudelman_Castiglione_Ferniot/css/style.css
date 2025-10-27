@@ -1,3 +1,22 @@
+/* ---------- Nuevas variables, utilidades y mejoras globales ---------- */
+:root {
+    /* Paleta principal (respetando colores existentes) */
+    --green-700: #356235;
+    --green-600: #4CAF50;
+    --green-500: #91B3C4; /* readonly background used before */
+    --accent: #3A6B8C;
+    --bg-overlay: rgba(53,98,53,0.9);
+    --surface: rgba(255,255,255,0.95);
+    --muted: #333;
+    --glass: rgba(255,255,255,0.08);
+
+    /* Tipografía y espaciado */
+    --fs-base: 16px;
+    --radius: 10px;
+    --shadow-soft: 0 6px 20px rgba(0,0,0,0.18);
+    --transition: 220ms cubic-bezier(.22,.9,.35,1);
+}
+
 /* Reset básico */
 * {
     margin: 0;
@@ -146,7 +165,6 @@ nav {
     filter: brightness(0.7) contrast(1.2);
     opacity: 0.4;
 }
-/*hago bordes redondos mapa*/
 
 /* Main - sin fondo beige */
 main {
@@ -175,7 +193,6 @@ main {
     margin-bottom: 0;
 }
 
-/* Alternar orden en secciones pares */
 .informacion:nth-child(even) {
     grid-template-columns: 1fr 1fr;
 }
@@ -183,10 +200,6 @@ main {
 .informacion:nth-child(even) .imagen-parque {
     padding-top: 30px;
 }
-
-.informacion:nth-child(even) .texto {
-}
-
 
 .informacion1 {
     max-width: 1200px;
@@ -207,16 +220,12 @@ main {
     margin-bottom: 0;
 }
 
-/* Alternar orden en secciones pares */
 .informacion1:nth-child(even) {
     grid-template-columns: 1fr 1fr;
 }
 
 .informacion1:nth-child(even) .imagen-parque {
     padding-top: 30px;
-}
-
-.informacion1:nth-child(even) .texto {
 }
 
 .imagen-parque {
@@ -278,12 +287,12 @@ main {
     border: 2px solid #ddd;
 }
 
-/* Footer */
+/* Footer (centrado, íconos más pequeños, logo algo mayor) */
 footer {
-    background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(8px);
+    background: transparent; /* transparente sobre la imagen de fondo */
+    backdrop-filter: blur(6px); /* ligero vidrio para legibilidad */
     padding: 25px 0;
-    border-top: 3px solid #356235;
+    border-top: 1px solid rgba(255,255,255,0.18); /* línea sutil separadora */
     margin-top: 0;
 }
 
@@ -291,145 +300,165 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Separa copyright e íconos */
+    justify-content: center; /* centrado */
     align-items: center;
-    padding: 0 20px;
-    position: relative;
+    gap: 12px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .footer-text {
-    color: #356235;
+    color: var(--green-700);
     font-size: 0.95em;
     font-weight: 500;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-    text-align: center;
-    flex: 1; /* Ocupa el espacio disponible */
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+    margin: 6px 0;
 }
 
-/* Contenedor para los íconos */
+/* Iconos: Instagram más pequeño, logo del parque un poco más grande */
 .footer-icons {
     display: flex;
+    gap: 10px;
     align-items: center;
-    gap: 15px; /* Espacio entre íconos */
 }
-
-/* Estilo para el logo de Instagram */
 .footer-icons a img {
-    height: 32px; /* Tamaño del ícono de Instagram */
-    width: 32px;
+    height: 26px; /* ícono IG más pequeño */
+    width: 26px;
     border-radius: 6px;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     border: 2px solid transparent;
 }
-
 .footer-icons a img:hover {
-    transform: scale(1.1);
-    border-color: #356235;
+    transform: scale(1.08);
+    border-color: var(--green-700);
 }
-
-/* Estilo para el logo del parque */
 .logo {
-    height: 45px; /* Más grande que el de Instagram */
-    width: auto; /* Mantiene la proporción */
+    height: 36px; /* logo del parque un poco más grande que IG */
+    width: auto;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     border: 2px solid transparent;
 }
-
 .logo:hover {
-    transform: scale(1.1);
-    border-color: #356235;
+    transform: scale(1.06);
+    border-color: var(--green-700);
 }
 
-/* Responsive Design */
+/* Estilos específicos para paginas/naturaleza.html (usa .texto-box y .lead) */
+.informacion .texto-box {
+    /* fondo suave, centrado y elegante */
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 28px 30px;
+    max-width: 820px;
+    margin: 0 auto;
+    border-radius: 14px;
+    box-shadow: 0 18px 38px rgba(21,55,21,0.10);
+    text-align: center;
+}
+
+/* Título y lead legible y armonioso */
+.informacion .texto-box h2 {
+    color: var(--green-700);
+    font-size: clamp(1.6rem, 2.2vw, 2rem);
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+    font-weight: 800;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+}
+.informacion .texto-box .lead {
+    color: #182020;
+    font-size: clamp(1rem, 1.4vw, 1.06rem);
+    line-height: 1.75;
+    margin: 0 auto;
+    max-width: 72ch;
+    font-weight: 500;
+}
+
+/* Carrusel: ubicado debajo del texto, centrado y con aspecto pulido */
+.informacion .carousel {
+    max-width: 820px;
+    width: 100%;
+    margin: 20px auto 0;
+    position: relative;
+    background: transparent;
+    border-radius: 12px;
+    overflow: visible;
+    z-index: 30;
+}
+
+/* Contenedor track: overflow oculto, bordes redondeados para efecto tarjeta */
+.informacion .carousel .carousel-track {
+    display: flex;               /* items en fila horizontal */
+    gap: 0;
+    will-change: transform;
+    transition: transform 420ms ease;
+    scroll-snap-type: x mandatory; /* soporte para navegación táctil/teclado */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Cada slide ocupa 100% del viewport del carrusel (un apartado por slide) */
+.informacion .carousel .carousel-item {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+/* Caption (apartado) sobre la imagen: respetando la tipografía global (Arial) */
+.informacion .carousel .slide-caption {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    background: rgba(0,0,0,0.46);
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #fff;
+    max-width: 68%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.28);
+    backdrop-filter: blur(4px);
+    font-family: Arial, sans-serif; /* respetar tipografía global */
+}
+.informacion .carousel .slide-caption h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.05rem;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+}
+.informacion .carousel .slide-caption p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.4;
+    color: #f3f3f3;
+}
+
+/* En pantallas pequeñas mantener captions legibles y ocupando más ancho */
 @media (max-width: 768px) {
-    body {
-        background-attachment: scroll;
+    .informacion .carousel .slide-caption { left: 12px; right: 12px; max-width: calc(100% - 32px); bottom: 12px; padding: 10px; }
+    .informacion .carousel .slide-caption h3 { font-size: 1rem; }
+    .informacion .carousel .slide-caption p { font-size: 0.95rem; }
+}
+
+/* Mejorar indicación visual de slides: mantener dots y controles legibles */
+.informacion .carousel .carousel-dots { margin-top: 12px; }
+.informacion .carousel .carousel-control { background: rgba(255,255,255,0.95); }
+
+/* Responsive: ajustar tamaños en pantallas pequeñas */
+@media (max-width: 768px) {
+    .informacion .texto-box {
+        padding: 18px;
+        max-width: 92%;
+        border-radius: 10px;
+        box-shadow: 0 8px 22px rgba(0,0,0,0.10);
     }
-    
-    .header-content {
-        padding: 12px 15px;
-        background-color: rgba(53, 98, 53, 0.95);
-        width: 100%;
-    }
-    
-    .header-title {
-        font-size: 1.8em;
-        letter-spacing: 1px;
-        margin-bottom: 4px;
-    }
-    
-    .header-subtitle {
-        font-size: 0.9em;
-        margin-bottom: 12px;
-    }
-    
-    .nav-menu {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .nav-menu a {
-        padding: 6px 12px;
-        font-size: 0.9em;
-    }
-    
-    .nav-menu a.active {
-        text-underline-offset: 2px;
-        text-decoration-thickness: 1.5px;
-    }
-    
-    .nav-menu a.active::after {
-        width: 60%;
-        height: 1.5px;
-    }
-    
-    .banner {
-        height: 200px;
-    }
-    
-    .informacion {
-        grid-template-columns: 1fr;
-        gap: 0;
-        background-color: #91B3C4;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    }
-    
-    .informacion:nth-child(even) .imagen-parque,
-    .informacion:nth-child(even) .texto {
-        order: initial;
-    }
-    
-    .informacion:nth-child(even) .imagen-parque {
-        padding-top: 15px;
-    }
-    
-    .imagen-parque {
-        padding: 15px;
-        min-height: 280px;
-        background-color: #91B3C4;
-    }
-    
-    .parque-img {
-        height: 250px;
-    }
-    
-    .texto {
-        padding: 25px;
-        background-color: #91B3C4;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        position: relative;
-    }
-    
-    .footer-icon {
-        position: static;
-        margin-top: 10px;
-    }
+    .informacion .carousel { max-width: 92%; margin-top: 14px; }
+    .informacion .carousel .carousel-item img { height: clamp(160px, 40vw, 360px); border-radius: 10px; }
+    .informacion .carousel .carousel-control { width: 38px; height: 38px; }
+    .informacion .carousel .carousel-dot { width: 9px; height: 9px; }
 }
 
 @media (max-width: 480px) {
@@ -512,4 +541,185 @@ footer {
         position: static;
         margin-top: 10px;
     }
+}
+
+/* ---------- Notas para pruebas responsive ----------
+- Verificar meta viewport en <head>: <meta name="viewport" content="width=device-width,initial-scale=1">
+- Probar anchos: 320px, 375px, 412px, 768px, 1024px, 1366px.
+- Comprobar que .informacion y .informacion1 se apilen en <=768px y que imágenes mantengan proporción.
+- Revisar mapas e iframes en móviles (tocar-zoom) y que botones .btn sean accesibles.
+*/
+
+/* Naturaleza: sección en una sola columna (texto + carrusel), sobreescribe grid de .informacion */
+.informacion.naturaleza {
+    grid-template-columns: 1fr;
+    padding: 28px;
+    /* eliminar el fondo azul para esta sección y quitar blur de fondo */
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    padding: 28px 14px; /* mantener espacio interno */
+}
+
+/* asegurar que el texto-box no herede fondo azul */
+.informacion.naturaleza .texto-box {
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Usar la misma tipografía y estilos del título que en la página inicio (.texto h2) */
+.informacion.naturaleza .texto-box h2,
+.informacion.naturaleza .texto h2 {
+    color: #356235;               /* igual que .texto h2 */
+    font-size: 1.6em;            /* igual que .texto h2 */
+    margin-bottom: 18px;
+    font-weight: bold;
+    border-bottom: 3px solid #356235;
+    padding-bottom: 8px;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+    text-align: left; /* mantener alineación coherente; si preferís centrado usa center */
+}
+
+/* Asegurar el lead conserva la tipografía global */
+.informacion.naturaleza .lead {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Mantener carrusel horizontal (ya activo) y que ocupe el ancho del bloque */
+.informacion.naturaleza .carousel {
+    max-width: 100%;
+    margin: 18px auto 0;
+}
+
+/* Caption: pequeño ajuste para legibilidad en esta página */
+.informacion.naturaleza .slide-caption {
+    left: 18px;
+    bottom: 18px;
+    max-width: 60%;
+}
+
+/* Si se requiere que el título dentro del caption use la tipografía principal */
+.informacion.naturaleza .slide-caption h3,
+.informacion.naturaleza .slide-caption p {
+    font-family: Arial, sans-serif;
+}
+
+/* Galería simétrica para paginas/naturaleza (reemplaza el carrusel) */
+.informacion.naturaleza .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    max-width: 1100px;
+    margin: 20px auto 0;
+    align-items: stretch;
+    padding: 0 10px;
+}
+.informacion.naturaleza .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+.informacion.naturaleza .gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    transition: transform var(--transition), filter 220ms;
+}
+.informacion.naturaleza .gallery-item:hover img {
+    transform: scale(1.04);
+    filter: saturate(1.03);
+}
+.informacion.naturaleza .gallery-caption {
+    padding: 10px 12px;
+    font-family: Arial, sans-serif; /* respeta tipografía global */
+    font-size: 0.95rem;
+    color: var(--green-700);
+    background: rgba(255,255,255,0.9);
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Responsive: reducir columnas en pantallas más pequeñas */
+@media (max-width: 992px) {
+    .informacion.naturaleza .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .informacion.naturaleza .gallery-item img { height: 200px; }
+}
+@media (max-width: 768px) {
+    .informacion.naturaleza .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .informacion.naturaleza .gallery-item img { height: 180px; }
+    .informacion.naturaleza .gallery-caption { font-size: 0.92rem; padding: 8px 10px; }
+}
+@media (max-width: 480px) {
+    .informacion.naturaleza .gallery-grid { grid-template-columns: 1fr; gap: 10px; }
+    .informacion.naturaleza .gallery-item img { height: auto; }
+}
+
+/* RESET DEL FONDO AZUL SOLO PARA LA PÁGINA NATURALEZA */
+.informacion.naturaleza {
+    background-color: transparent !important; /* quita el panel azul grande */
+    backdrop-filter: none !important;
+    box-shadow: none !important; /* si querés mantener sombra de contenedor, quitar esta línea */
+    padding: 18px 12px; /* ajusta espacio interno */
+}
+
+/* Asegurar que el bloque de texto no tenga fondo azul */
+.informacion.naturaleza .texto,
+.informacion.naturaleza .texto-box,
+.informacion.naturaleza .texto-box * {
+    background: #91B3C4 !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: inherit; /* mantiene color del texto */
+    border-radius: 16px;
+}
+
+/* Mantener la apariencia de las imágenes: bordes redondeados y sombra ligera */
+.informacion.naturaleza .gallery-item {
+    background: transparent !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    border-radius: 12px;
+}
+
+/* Si las imágenes aún muestran contenedores internos con fondo, forzamos que sean transparentes */
+.informacion.naturaleza .gallery-item img {
+    background: transparent !important;
+}
+
+/* Si existe algún padding o margen interno que simule un panel azul, reducirlo */
+.informacion.naturaleza .texto-box {
+    padding: 8px 6px !important;
+}
+
+/* Responsive: mantener comportamiento en móviles */
+@media (max-width: 768px) {
+    .informacion.naturaleza { padding: 12px 8px; }
+    .informacion.naturaleza .texto-box { padding: 8px; }
+}
+
+/* Naturaleza: cuadro azulito para el título y texto verde según paleta */
+.informacion.naturaleza .texto-box {
+    background-color: var(--green-500); /* azulcito solicitado */
+    border: 1px solid rgba(0,0,0,0.06);
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* Título y texto descriptivo en verde (paleta) */
+.informacion.naturaleza .texto-box h2,
+.informacion.naturaleza .texto-box .lead {
+    color: var(--green-700) !important;
+}
+
+/* Ajuste de contraste leve para legibilidad (sutil) */
+.informacion.naturaleza .texto-box h2 {
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
 }
