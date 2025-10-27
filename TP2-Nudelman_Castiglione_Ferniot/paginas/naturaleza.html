@@ -1,185 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Naturaleza - Parque Nacional Lanín</title>
-	<link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parque Nacional Lanín</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-	<header>
-		<div class="header-content">
-			<h1 class="header-title">NATURALEZA</h1>
-			<p class="header-subtitle">Ecosistemas y biodiversidad</p>
-			<nav>
-				<ul class="nav-menu">
-					<li><a href="../index.html">Inicio</a></li>
-					<li><a class="active" href="naturaleza.html">Naturaleza</a></li>
-					<li><a href="historia.html">Historia</a></li>
-					<li><a href="actividades_y_costos.html">Actividades y costos</a></li>
-					<li><a href="contacto.html">Contacto</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+    <header>
+        <div class="header-content">
+            <h1 class="header-title">PARQUE NACIONAL LANÍN</h1>
+            <p class="header-subtitle">Un lugar como ninguno.</p>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>                   
+                    <li><a href="naturaleza.html">Naturaleza</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="#actividades">Actividades y costos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-	<main>
-		<section class="informacion naturaleza">
-			<div class="texto">
-				<div class="texto-box">
-					<h2>Flora y fauna</h2>
-					<p class="lead">El Parque Nacional Lanín conserva una gran variedad de ambientes: bosques andino‑patagónicos, lagos y altas cumbres. Aquí mostramos una selección fotográfica representativa de su paisaje y especies.</p>
-				</div>
+    <main>
+        <section class="informacion">
+            <div class="contenido-wrapper">
+                <div class="texto">
+                    <h2 class="subtitulo">El parque alberga una diversidad natural excepcional. Sus bosques milenarios están dominados por la araucaria o pehuén, árbol emblemático de Neuquén que puede vivir más de 1.000 años. Estos bosques se mezclan con lagos de un azul intenso como el Huechulafquen y el Lácar, cuyas aguas deben su color a sedimentos glaciares. La zona norte del parque concentra los bosques de araucarias más imponentes, mientras que la zona sur presenta lagos más accesibles cerca de San Martín de los Andes, creando paisajes que cambian mágicamente con cada estación.</h2>
+                </div>
+            </div>
+        </section>
 
-				<!-- Gallery (reemplaza el carrusel) -->
-				<div class="gallery-grid">
-					<div class="gallery-item">
-						<img src="../assets/imagenes/imagen1.jpg" alt="Bosque andino‑patagónico">
-						<div class="gallery-caption">Bosques andino‑patagónicos</div>
-					</div>
-					<div class="gallery-item">
-						<img src="../assets/imagenes/imagen2.jpg" alt="Lagos y ríos">
-						<div class="gallery-caption">Lagos y ríos</div>
-					</div>
-					<div class="gallery-item">
-						<img src="../assets/imagenes/imagen3.jpg" alt="Cumbres y nieves">
-						<div class="gallery-caption">Cumbres y nieves</div>
-					</div>
-					<div class="gallery-item">
-						<img src="../assets/imagenes/imagen4.jpg" alt="Atardeceres y miradores">
-						<div class="gallery-caption">Atardeceres y miradores</div>
-					</div>
-				</div>
-			</div>
+        <section class="galeria-naturaleza" >
+            <div>
+                <div>
 
-			<!-- imagen lateral eliminada por completo -->
-		</section>
-	</main>
+                    <img src="../assets/imagenes/imagen-1-naturaleza.jpg" alt="Lago con vista al volcán y rayos de sol">
+                </div>
+                <div>
 
-	<!-- footer unificado -->
-	<footer>
-		<div class="footer-content">
-			<p class="footer-text">© 2025 Parque Nacional Lanín. Todos los derechos reservados.</p>
-			<div class="footer-icons">
-				<a href="https://www.instagram.com/pnlanin/?hl=es" target="_blank" aria-label="Instagram PN Lanín">
-					<img src="../assets/imagenes/instagram logo.jpg" alt="Instagram Parque Nacional Lanín">
-				</a>
-				<img src="../assets/imagenes/logo parque.jpg" class="logo" alt="Logo Parque Nacional Lanín">
-			</div>
-		</div>
-	</footer>
+                    <img src="../assets/imagenes/imagen-2-naturaleza.jpg" alt="Volcán nevado con bosque nativo">
+                </div>
+                <div>
 
-	<!-- CSS específico para la galería en naturaleza.html -->
-	<style>
-		/* Galería vertical: cada imagen una debajo de otra, ocupando ancho completo */
-		.informacion.naturaleza .gallery-grid {
-			display: flex;
-			flex-direction: column;
-			gap: 20px;
-			margin-top: 18px;
-			max-width: 1100px;
-			margin-left: auto;
-			margin-right: auto;
-			padding: 0 10px;
-		}
-		.informacion.naturaleza .gallery-item {
-			position: relative;
-			overflow: hidden;
-			border-radius: 12px;
-			background: transparent; /* sin fondo azul */
-			box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-		}
-		.informacion.naturaleza .gallery-item img {
-			width: 100%;
-			height: clamp(420px, 50vh, 800px); /* más alto visualmente */
-			object-fit: cover;
-			display: block;
-			vertical-align: middle;
-		}
-		/* caption como overlay; si preferís debajo, lo puedo mover fácilmente */
-		.informacion.naturaleza .gallery-caption {
-			position: absolute;
-			left: 12px;
-			right: 12px;
-			bottom: 12px;
-			background: rgba(0,0,0,0.5);
-			color: #fff;
-			padding: 10px 12px;
-			text-align: center;
-			border-radius: 8px;
-			font-family: Arial, sans-serif;
-			font-size: 1rem;
-		}
+                    <img src="../assets/imagenes/imagen-3-naturaleza.jpg" alt="Lago con costa rocosa y montaña nevada">
+                </div>
+                <div>
 
-		/* Responsive: reducir altura en pantallas pequeñas */
-		@media (max-width: 992px) {
-			.informacion.naturaleza .gallery-item img { height: clamp(320px, 42vh, 640px); }
-		}
-		@media (max-width: 768px) {
-			.informacion.naturaleza .gallery-item img { height: clamp(280px, 36vh, 520px); }
-			.informacion.naturaleza .gallery-caption { font-size: 0.95rem; padding: 8px 10px; }
-		}
-	</style>
+                    <img src="../assets/imagenes/imagen-4-naturaleza.jpg" alt="Araucarias con volcán nevado al fondo">
+                </div>
+            </div>
+        </section>
+    </main>
 
-	<!-- Estilos locales para centrar todo en esta página -->
-	<style>
-		/* Centrar la sección principal y limitar ancho */
-		.informacion1 {
-			/* centro absoluto dentro del viewport (respeta header/footer) */
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			min-height: calc(100vh - 160px); /* ajusta según header/footer */
-			max-width: 1100px;
-			margin: 0 auto;
-			padding: 20px;
-			box-sizing: border-box;
-		}
+    <footer>
+    <div class="footer-content">
+        <div class="footer-arriba">
+            <p class="footer-text">© 2025 Parque Nacional Lanín. Todos los derechos reservados.</p>
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/pnlanin/?hl=es" target="_blank">
+                    <img src="../assets/imagenes/instagram logo.jpg" alt="Instagram Parque Nacional Lanín">
+                </a>
+                <img src="../assets/imagenes/logo parque.jpg" class="logo" alt="Logo Parque Nacional Lanín">
+            </div>
+        </div>
 
-		/* Centrar el bloque de texto y ajustar anchos legibles */
-		.informacion1 .texto {
-			margin: 0 auto;
-			text-align: center;
-			max-width: 860px;
-			width: 100%;
-			box-sizing: border-box;
-		}
-		.informacion1 .texto h2 {
-			margin-bottom: 12px;
-		}
-		.informacion1 .texto p {
-			margin: 0 auto 18px;
-			max-width: 78ch;
-			line-height: 1.7;
-			text-align: center;
-		}
-
-		/* Imagen dentro del texto centrada y responsiva */
-		.informacion1 .parque-img {
-			display: block;
-			margin: 18px auto;
-			max-width: 92%;
-			height: auto;
-			border-radius: 12px;
-			box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-		}
-
-		/* Footer centrado (refuerzo local) */
-		footer .footer-content {
-			justify-content: center;
-			text-align: center;
-		}
-
-		/* Ajustes móviles */
-		@media (max-width: 768px) {
-			.informacion1 {
-				min-height: auto;
-				padding: 14px;
-				margin: 20px auto;
-			}
-			.informacion1 .texto p { font-size: 0.98rem; max-width: 46ch; }
-			.informacion1 .parque-img { max-height: 46vh; object-fit: cover; }
-		}
-	</style>
+        <div class="menu-footer">
+            <a href="#inicio">Inicio</a></li>                   
+            <a href="paginas/naturaleza.html" >Naturaleza</a>
+            <a href="paginas/historia.html">Historia</a>
+            <a href="paginas/actividades_y_costos.html">Actividades y costos</a>
+            <a href="paginas/contacto.html">Contacto</a>
+        </div>
+    </div>
+    </footer>
 </body>
 </html>

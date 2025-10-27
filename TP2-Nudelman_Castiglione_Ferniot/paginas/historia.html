@@ -1,110 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Historia - Parque Nacional Lanín</title>
-	<link rel="stylesheet" href="../css/style.css">
-	<!-- Estilos locales para centrar todo en esta página -->
-	<style>
-		/* Centrar la sección principal y limitar ancho */
-		.informacion1 {
-			max-width: 1000px;
-			margin: 36px auto;
-			padding: 20px;
-			box-sizing: border-box;
-		}
-
-		/* Centrar el bloque de texto y ajustar anchos legibles */
-		.informacion1 .texto {
-			margin: 0 auto;
-			text-align: center; /* texto centrado según pedido */
-			max-width: 860px;
-		}
-		.informacion1 .texto h2 {
-			text-align: center;
-			margin-bottom: 12px;
-		}
-		.informacion1 .texto p {
-			margin: 0 auto 18px;
-			max-width: 78ch;
-			line-height: 1.7;
-			text-align: center;
-		}
-
-		/* Imagen dentro del texto centrada y responsiva */
-		.informacion1 .parque-img {
-			display: block;
-			margin: 18px auto;
-			max-width: 92%;
-			height: auto;
-			border-radius: 12px;
-			box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-		}
-
-		/* Footer centrado (refuerzo local) */
-		footer .footer-content {
-			justify-content: center;
-			text-align: center;
-		}
-
-		/* Ajustes móviles */
-		@media (max-width: 768px) {
-			.informacion1 { padding: 14px; margin: 20px auto; }
-			.informacion1 .texto p { font-size: 0.98rem; max-width: 46ch; }
-			.informacion1 .parque-img { max-height: 46vh; object-fit: cover; }
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parque Nacional Lanín</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-	<header>
-		<div class="header-content">
-			<h1 class="header-title">HISTORIA</h1>
-			<p class="header-subtitle">Breve reseña histórica</p>
-			<nav>
-				<ul class="nav-menu">
-					<li><a href="../index.html">Inicio</a></li>
-					<li><a href="naturaleza.html">Naturaleza</a></li>
-					<li><a class="active" href="historia.html">Historia</a></li>
-					<li><a href="actividades_y_costos.html">Actividades y costos</a></li>
-					<li><a href="contacto.html">Contacto</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+    <header>
+        <div class="header-content">
+            <h1 class="header-title">PARQUE NACIONAL LANÍN</h1>
+            <p class="header-subtitle">Un lugar como ninguno.</p>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Inicio</a></li>                                     
+                    <li><a href="naturaleza.html" >Naturaleza</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="actividades_y_costos.html">Actividades y costos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-	<main>
-		<section class="informacion1">
-			<div class="texto">
-				<h2>Origen y conservación</h2>
-				<p>
-					El Parque Nacional Lanín protege ecosistemas patagónicos y cordilleranos desde su creación. Su historia refleja esfuerzos de conservación y la colaboración entre comunidades locales y autoridades para preservar el patrimonio natural.
-				</p>
 
-				<!-- Imagen solicitada dentro del texto -->
-				<div style="max-width:900px;margin:18px auto;text-align:center;">
-					<img src="../assets/imagenes/imagen5.JPG" alt="Imagen histórica del parque" class="parque-img">
-				</div>
+    <main>
+        <section class="informacion">
+            <div class="contenido-wrapper">
+                <div class="texto">
+                    <h2 class="subtitulo">El Parque Nacional Lanín se estableció formalmente el 11 de mayo de 1937 mediante la Ley Nacional N° 13.895, bajo la presidencia de Agustín P. Justo. Su creación formó parte del plan maestro de Parques Nacionales diseñado por Exequiel Bustillo, entonces director del sistema. La fundación del parque respondió a urgentes necesidades de conservación: detener la tala indiscriminada de bosques nativos, especialmente de araucarias milenarias, y proteger cuencas hídricas esenciales. Los primeros guardaparques comenzaron sus funciones en 1945, estableciendo los puestos de control y vigilancia que permitieron la recuperación de los ecosistemas degradados.</h2>
+                </div>
+            </div>
+        </section>
 
-				<p>
-					La imagen anterior es representativa del paisaje y la infraestructura histórica del área. Puedes reemplazar el archivo si necesitas otra fotografía o ajustar el tamaño cambiando la clase o el CSS.
-				</p>
-			</div>
+        <section class="galeria-naturaleza" style="padding: 3rem 1rem; max-width: 1200px; margin: 0 auto;">
+            <div>
+                <img src="../assets/imagenes/pnlgorraaaaaaaaaaaaa.JPG" alt="casadepnl" style="width: 100%; height: 500px; object-fit: cover;">
+            </div>
+        </section>
+    </main>
 
-		</section>
-	</main>
+    <footer>
+    <div class="footer-content">
+        <div class="footer-arriba">
+            <p class="footer-text">© 2025 Parque Nacional Lanín. Todos los derechos reservados.</p>
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/pnlanin/?hl=es" target="_blank">
+                    <img src="../assets/imagenes/instagram logo.jpg" alt="Instagram Parque Nacional Lanín">
+                </a>
+                <img src="../assets/imagenes/logo parque.jpg" class="logo" alt="Logo Parque Nacional Lanín">
+            </div>
+        </div>
 
-	<!-- footer unificado -->
-	<footer>
-		<div class="footer-content">
-			<p class="footer-text">© 2025 Parque Nacional Lanín. Todos los derechos reservados.</p>
-			<div class="footer-icons">
-				<a href="https://www.instagram.com/pnlanin/?hl=es" target="_blank" aria-label="Instagram PN Lanín">
-					<img src="../assets/imagenes/instagram logo.jpg" alt="Instagram Parque Nacional Lanín">
-				</a>
-				<img src="../assets/imagenes/logo parque.jpg" class="logo" alt="Logo Parque Nacional Lanín">
-			</div>
-		</div>
-	</footer>
+        <div class="menu-footer">
+            <a href="#inicio">Inicio</a></li>                   
+            <a href="paginas/naturaleza.html" >Naturaleza</a>
+            <a href="paginas/historia.html">Historia</a>
+            <a href="paginas/actividades_y_costos.html">Actividades y costos</a>
+            <a href="paginas/contacto.html">Contacto</a>
+        </div>
+    </div>
+    </footer>
 </body>
 </html>
