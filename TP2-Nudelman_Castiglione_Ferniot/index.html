@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parque Nacional Lanín</title>
+
+    <!-- favicon: logo del parque (archivo existente, espacio en nombre codificado). Añadimos shortcut y cache-bust -->
+    <link rel="icon" href="assets/imagenes/logo%20parque.jpg?v=2" type="image/jpeg">
+    <link rel="shortcut icon" href="assets/imagenes/logo%20parque.jpg?v=2" type="image/jpeg">
+    <link rel="apple-touch-icon" href="assets/imagenes/logo%20parque.jpg?v=2">
+
+    <!-- color de la barra en móviles -->
+    <meta name="theme-color" content="#356235">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,8 +35,6 @@
     </header>
 
     <main>
-    
-
         <!-- Secciones de contenido con fondo azul -->
         <section class="informacion">
                 <div class="texto">
@@ -37,11 +46,9 @@
                 <div class="imagen-parque">
                     <img src="assets/imagenes/imagen-parque.jpg" alt="Volcán Lanín" class="parque-img">
                 </div>
-            
         </section>
 
         <section class="informacion1">
-        
                 <div class="imagen-parque"> 
                     <img src="assets/imagenes/imagen-parque2.jpg" alt="Paisaje Lanín" class="parque-img">
                 </div>
@@ -59,25 +66,27 @@
     </main>
 
     <footer>
-    <div class="footer-content">
-        <div class="footer-arriba">
+        <div class="footer-content">
             <p class="footer-text">© 2025 Parque Nacional Lanín. Todos los derechos reservados.</p>
+
+            <!-- Footer navigation (root page uses pages/ links) -->
+            <nav class="footer-nav" aria-label="Enlaces del pie de página">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="paginas/naturaleza.html">Naturaleza</a></li>
+                    <li><a href="paginas/historia.html">Historia</a></li>
+                    <li><a href="paginas/actividades_y_costos.html">Actividades y costos</a></li>
+                    <li><a href="paginas/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
             <div class="footer-icons">
-                <a href="https://www.instagram.com/pnlanin/?hl=es" target="_blank">
+                <a href="https://www.instagram.com/pnlanin/?hl=es" target="_blank" aria-label="Instagram PN Lanín">
                     <img src="assets/imagenes/instagram logo.jpg" alt="Instagram Parque Nacional Lanín">
                 </a>
                 <img src="assets/imagenes/logo parque.jpg" class="logo" alt="Logo Parque Nacional Lanín">
             </div>
         </div>
-
-        <div class="menu-footer">
-            <a href="#inicio">Inicio</a></li>                   
-            <a href="paginas/naturaleza.html" >Naturaleza</a>
-            <a href="paginas/historia.html">Historia</a>
-            <a href="paginas/actividades_y_costos.html">Actividades y costos</a>
-            <a href="paginas/contacto.html">Contacto</a>
-        </div>
-    </div>
     </footer>
 </body>
 </html>
