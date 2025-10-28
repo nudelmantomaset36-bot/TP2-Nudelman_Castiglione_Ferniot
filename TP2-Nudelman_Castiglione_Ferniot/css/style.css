@@ -1,4 +1,3 @@
-
 :root {
    
     --green-700: #356235;
@@ -246,6 +245,13 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin: auto;
+    transition: transform 0.35s cubic-bezier(.22,.9,.35,1), box-shadow 0.25s;
+}
+
+.parque-img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(53,98,53,0.25);
+    z-index: 2;
 }
 
 .texto {
@@ -287,6 +293,7 @@ main {
 }
 
 footer {
+    
     background: transparent; 
     padding: 25px 0;
     border-top: none;
@@ -294,8 +301,13 @@ footer {
     margin-top: 0;
 }
 
+.apartados {
+    text-align: justify;
+
+}
 
 .footer-content {
+    
     max-width: 1200px;
     margin: 0 auto;
     position: relative;

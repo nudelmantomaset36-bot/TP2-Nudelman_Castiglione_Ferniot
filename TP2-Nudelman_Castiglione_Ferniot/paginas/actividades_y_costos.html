@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/imagenes/logo parque.png" type="image/jpeg">
     <title>Parque Nacional Lanín</title>
+    <link rel="icon" href="../assets/imagenes/logo parque.png" type="image/jpeg">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -14,50 +14,69 @@
             <p class="header-subtitle">Un lugar como ninguno.</p>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="../index.html">Inicio</a></li>                   
-                    <li><a href="paginas/naturaleza.html" >Naturaleza</a></li>
-                    <li><a href="paginas/historia.html">Historia</a></li>
-                    <li><a href="paginas/actividades_y_costos.html">Actividades y costos</a></li>
-                    <li><a href="paginas/contacto.html">Contacto</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="naturaleza.html">Naturaleza</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a class="active" href="actividades_y_costos.html">Actividades y costos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <header>
-        <div class="actividad_1">
-            Entrada al parque: Las entradas al parque cuestan; Tarifa general $20.000, para residentes nacionales $ 7.000,para residentes provinciales $ 5.000 y para estudiantes $ 5.000
-            <img src="../assets/imagenes/pqnl_entrada.jfif" alt="entrada">
-        </div>
-        <div class="actividad_2">
-            Hospedaje: El costo de una noche en una vivienda varia desde los $75.000 hasta los $170.000 para alternativas mas lujosas
-            <img src="../assets/imagenes/hospedaje_pnl.jpg" alt="hospedaje">
-        </div>
-        <div class="actividad_3">
-            Actividades recreativas: se realizan distintas actividades como senderismo y trekking, ascenso al volcan lanin, ciclismo, deportes náuticos, pesca deportiva, observacion de flora y fauna y excursiones lacustres.
-            <img src="../assets/imagenes/ascensovolcan.jfif" alt="actividades">
-        </div>
-        <div>
-            Servicios: Los servicios de comida rondan los $15.000 por comida incluyendo bebida y para el transporte se recomienda venir con un vehiculo como un auto o una bicicleta con la cual podrás recorrer varios senderos.
-            <img src="../assets/imagenes/ciclkismopqnl.jfif" alt="ciclismo"> 
-        </div>
-    </header>
-</body>
-
+    <main>
+        <section class="informacion">
+            <div class="texto">
+                <h2 style="font-size:2em;">Entradas al parque</h2>
+                <p style="font-size:1.25em;">Las entradas al parque tienen los siguientes valores:<br>
+                <strong>Tarifa general:</strong> $20.000<br>
+                <strong>Residentes nacionales:</strong> $7.000<br>
+                <strong>Residentes provinciales:</strong> $5.000<br>
+                <strong>Estudiantes:</strong> $5.000</p>
+            </div>
+            <div class="imagen-parque">
+                <img src="../assets/imagenes/pqnl_entrada.jfif" alt="Entrada Parque Nacional Lanín" class="parque-img">
+            </div>
+        </section>
+        <section class="informacion1">
+            <div class="imagen-parque">
+                <img src="../assets/imagenes/hospedaje_pnl.jpg" alt="Hospedaje en el parque" class="parque-img">
+            </div>
+            <div class="texto">
+                <h2 style="font-size:2em;">Hospedaje</h2>
+                <p style="font-size:1.25em;">El costo de una noche en una vivienda varía desde los $75.000 hasta los $170.000 para alternativas más lujosas.</p>
+            </div>
+        </section>
+        <section class="informacion">
+            <div class="texto">
+                <h2 style="font-size:2em;">Actividades recreativas</h2>
+                <p style="font-size:1.25em;">Se pueden realizar distintas actividades como senderismo y trekking, ascenso al volcán Lanín, ciclismo, deportes náuticos, pesca deportiva, observación de flora y fauna y excursiones lacustres.</p>
+            </div>
+            <div class="imagen-parque">
+                <img src="../assets/imagenes/ascensovolcan.jfif" alt="Actividades en el parque" class="parque-img">
+            </div>
+        </section>
+        <section class="informacion1">
+            <div class="imagen-parque">
+                <img src="../assets/imagenes/ciclkismopqnl.jfif" alt="Ciclismo en el parque" class="parque-img">
+            </div>
+            <div class="texto">
+                <h2 style="font-size:2em;">Servicios</h2>
+                <p style="font-size:1.25em;">Los servicios de comida rondan los $15.000 por comida incluyendo bebida. Para el transporte se recomienda venir con un vehículo propio o una bicicleta, con la cual podrás recorrer varios senderos.</p>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="footer-content">
             <p class="footer-text">© 2025 Parque Nacional Lanín. Todos los derechos reservados.</p>
-
-            
             <nav class="footer-nav" aria-label="Enlaces del pie de página">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="paginas/naturaleza.html">Naturaleza</a></li>
-                    <li><a href="paginas/historia.html">Historia</a></li>
-                    <li><a href="paginas/actividades_y_costos.html">Actividades y costos</a></li>
-                    <li><a href="paginas/contacto.html">Contacto</a></li>
+                <ul class="apartados">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="naturaleza.html">Naturaleza</a></li>
+                    <li><a href="historia.html">Historia</a></li>
+                    <li><a href="actividades_y_costos.html">Actividades y costos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-
             <div class="footer-icons">
                 <a href="https://www.instagram.com/pnlanin/?hl=es" target="_blank" aria-label="Instagram PN Lanín">
                     <img src="../assets/imagenes/logo-instagram-byn.png" alt="Instagram Parque Nacional Lanín">
@@ -66,4 +85,5 @@
             </div>
         </div>
     </footer>
+</body>
 </html>
