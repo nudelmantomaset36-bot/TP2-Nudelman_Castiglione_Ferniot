@@ -468,7 +468,12 @@ footer::before {
     text-align: center;
 }
 
+<<<<<<< Updated upstream
 .informacion .texto-box h2 {
+=======
+/* Título y lead legible y armonioso */
+.informacion .texto-florafauna h2 {
+>>>>>>> Stashed changes
     color: var(--green-700);
     font-size: clamp(1.6rem, 2.2vw, 2rem);
     margin: 0 0 10px 0;
@@ -476,8 +481,8 @@ footer::before {
     font-weight: 800;
     text-shadow: 0 1px 0 rgba(255,255,255,0.6);
 }
-.informacion .texto-box .lead {
-    color: #182020;
+.informacion .texto-florafauna .lead {
+    color: #000000;
     font-size: clamp(1rem, 1.4vw, 1.06rem);
     line-height: 1.75;
     margin: 0 auto;
@@ -500,8 +505,13 @@ footer::before {
 
 .informacion.naturaleza .texto-box h2,
 .informacion.naturaleza .texto h2 {
+<<<<<<< Updated upstream
     color: #356235;       
     font-size: 1.6em;          
+=======
+    color: #000000;               /* igual que .texto h2 */
+    font-size: 1.6em;            /* igual que .texto h2 */
+>>>>>>> Stashed changes
     margin-bottom: 18px;
     font-weight: bold;
     border-bottom: 3px solid #356235;
@@ -512,13 +522,16 @@ footer::before {
 
 .informacion.naturaleza .lead {
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #000000;
 }
 
+<<<<<<< Updated upstream
 .informacion.naturaleza .carousel {
     max-width: 100%;
     margin: 18px auto 0;
 }
+=======
+>>>>>>> Stashed changes
 
 .informacion.naturaleza .slide-caption {
     left: 18px;
@@ -700,13 +713,20 @@ footer::before {
 .historia h2 {
     margin-bottom: 15px;
     color: #356235; 
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
 }
 
 .historia p {
     font-size: 16px;
     line-height: 1.6;
+<<<<<<< Updated upstream
     margin-bottom: 25px; 
     color: #356235; 
+=======
+    margin-bottom: 25px; /* separa el texto de la imagen */
+    color: #333333; 
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+>>>>>>> Stashed changes
 }
 
 .historia img {
@@ -727,6 +747,7 @@ footer::before {
     box-shadow: 0 5px 15px rgba(0,0,0,0.25);
 }
 
-.texto-contacto{
+.texto-contacto .titulo{
     color: #356235; 
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6); 
 }
