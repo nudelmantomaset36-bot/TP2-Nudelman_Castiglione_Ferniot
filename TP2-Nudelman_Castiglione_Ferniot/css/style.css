@@ -501,7 +501,7 @@ footer::before {
     text-shadow: 0 1px 0 rgba(255,255,255,0.6);
 }
 .informacion .texto-box .lead {
-    color: #182020;
+    color: #1a1a1a;
     font-size: clamp(1rem, 1.4vw, 1.06rem);
     line-height: 1.75;
     margin: 0 auto;
@@ -525,9 +525,8 @@ footer::before {
 }
 
 /* Usar la misma tipografía y estilos del título que en la página inicio (.texto h2) */
-.informacion.naturaleza .texto-box h2,
-.informacion.naturaleza .texto h2 {
-    color: #356235;               /* igual que .texto h2 */
+.informacion.naturaleza .texto-box h2 {
+    color: #1a1a1a;               /* igual que .texto h2 */
     font-size: 1.6em;            /* igual que .texto h2 */
     margin-bottom: 18px;
     font-weight: bold;
@@ -537,32 +536,33 @@ footer::before {
     text-align: left; /* mantener alineación coherente; si preferís centrado usa center */
 }
 
+.informacion.naturaleza .texto .texto-box .lead {
+    color: #1a1a1a;
+    text-shadow: #91B3C4;
+    
+}
+
 /* Asegurar el lead conserva la tipografía global */
 .informacion.naturaleza .lead {
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #1a1a1a;
 }
 
-/* Mantener carrusel horizontal (ya activo) y que ocupe el ancho del bloque */
-.informacion.naturaleza .carousel {
-    max-width: 100%;
-    margin: 18px auto 0;
-}
 
-/* Caption: pequeño ajuste para legibilidad en esta página */
+
 .informacion.naturaleza .slide-caption {
     left: 18px;
     bottom: 18px;
     max-width: 60%;
 }
 
-/* Si se requiere que el título dentro del caption use la tipografía principal */
+
 .informacion.naturaleza .slide-caption h3,
 .informacion.naturaleza .slide-caption p {
     font-family: Arial, sans-serif;
 }
 
-/* Galería simétrica para paginas/naturaleza (reemplaza el carrusel) */
+
 .informacion.naturaleza .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -595,7 +595,7 @@ footer::before {
 }
 .informacion.naturaleza .gallery-caption {
     padding: 10px 12px;
-    font-family: Arial, sans-serif; /* respeta tipografía global */
+    font-family: Arial, sans-serif; 
     font-size: 0.95rem;
     color: var(--green-700);
     background: rgba(255,255,255,0.9);
@@ -603,7 +603,7 @@ footer::before {
     border-top: 1px solid rgba(0,0,0,0.04);
 }
 
-/* Responsive: reducir columnas en pantallas más pequeñas */
+
 @media (max-width: 992px) {
     .informacion.naturaleza .gallery-grid { grid-template-columns: repeat(3, 1fr); }
     .informacion.naturaleza .gallery-item img { height: 200px; }
@@ -618,15 +618,15 @@ footer::before {
     .informacion.naturaleza .gallery-item img { height: auto; }
 }
 
-/* RESET DEL FONDO AZUL SOLO PARA LA PÁGINA NATURALEZA */
+
 .informacion.naturaleza {
-    background-color: transparent !important; /* quita el panel azul grande */
+    background-color: transparent !important; 
     backdrop-filter: none !important;
-    box-shadow: none !important; /* si querés mantener sombra de contenedor, quitar esta línea */
-    padding: 18px 12px; /* ajusta espacio interno */
+    box-shadow: none !important; 
+    padding: 18px 12px; 
 }
 
-/* Asegurar que el bloque de texto no tenga fondo azul */
+
 .informacion.naturaleza .texto,
 .informacion.naturaleza .texto-box,
 .informacion.naturaleza .texto-box * {
@@ -634,36 +634,37 @@ footer::before {
     backdrop-filter: none !important;
     border: none !important;
     box-shadow: none !important;
-    color: inherit; /* mantiene color del texto */
+    color: #1a1a1a; 
+    text-shadow: 0 1 0 #91B3C4 ;
     border-radius: 16px;
 }
 
-/* Mantener la apariencia de las imágenes: bordes redondeados y sombra ligera */
+
 .informacion.naturaleza .gallery-item {
     background: transparent !important;
     box-shadow: 0 12px 30px rgba(0,0,0,0.06);
     border-radius: 12px;
 }
 
-/* Si las imágenes aún muestran contenedores internos con fondo, forzamos que sean transparentes */
+
 .informacion.naturaleza .gallery-item img {
     background: transparent !important;
 }
 
-/* Si existe algún padding o margen interno que simule un panel azul, reducirlo */
+
 .informacion.naturaleza .texto-box {
     padding: 8px 6px !important;
 }
 
-/* Responsive: mantener comportamiento en móviles */
+
 @media (max-width: 768px) {
     .informacion.naturaleza { padding: 12px 8px; }
     .informacion.naturaleza .texto-box { padding: 8px; }
 }
 
-/* Naturaleza: cuadro azulito para el título y texto verde según paleta */
+
 .informacion.naturaleza .texto-box {
-    background-color: var(--green-500); /* azulcito solicitado */
+    background-color: var(--green-500); 
     border: 1px solid rgba(0,0,0,0.06);
     padding: 20px 24px;
     border-radius: 12px;
@@ -671,31 +672,34 @@ footer::before {
     text-align: center;
 }
 
-/* Título y texto descriptivo en verde (paleta) */
-.informacion.naturaleza .texto-box h2,
-.informacion.naturaleza .texto-box .lead {
+
+.informacion.naturaleza .texto-box h2 {
+
     color: var(--green-700) !important;
 }
+.informacion.naturaleza .texto-box .lead {
+    color: #1a1a1a;
+    text-shadow: 0 1 0 #fdfeff;
+}
 
-/* Ajuste de contraste leve para legibilidad (sutil) */
 .informacion.naturaleza .texto-box h2 {
     text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
 }
 
-/* Footer: grid con texto centrado y nav+íconos a la derecha */
+
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     display: flex;
-    justify-content: center; /* centra copyright + icons */
+    justify-content: center; 
     align-items: center;
     gap: 12px;
     padding: 10px 20px;
     text-align: center;
 }
 
-/* Agrupar texto e iconos para que queden juntos y alineados */
+
 .footer-text,
 .footer-icons {
     display: inline-flex;
@@ -703,7 +707,7 @@ footer::before {
     gap: 10px;
 }
 
-/* Mover la navegación del footer a la derecha en pantallas grandes */
+
 .footer-nav {
     position: absolute;
     right: 20px;
@@ -715,7 +719,7 @@ footer::before {
     margin: 0;
 }
 
-/* En pantallas pequeñas, apilar y centrar todo, nav vuelve al flujo */
+
 @media (max-width: 600px) {
     .footer-content {
         display: flex;
@@ -733,7 +737,7 @@ footer::before {
     .logo { height: 30px; }
 }
 
-/* Cuadro principal */
+
 .historia {
     max-width: 900px;
     margin: 40px auto;
@@ -744,27 +748,29 @@ footer::before {
     box-shadow: 0 5px 15px rgba(0,0,0,0.25);
 }
 
-/* Título */
+
 .historia h2 {
     margin-bottom: 15px;
     color: #356235; 
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
 }
 
-/* Texto */
+
 .historia p {
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 25px; /* separa el texto de la imagen */
-    color: #356235; 
+    margin-bottom: 25px; 
+    color: #161616; 
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
 }
 
-/* Imagen */
+
 .historia img {
-    width: 80%;         /* podés poner 100% si querés que ocupe todo el ancho */
+    width: 80%;         
     height: auto;
     border-radius: 10px;
     display: block;
-    margin: 0 auto;     /* centra horizontalmente */
+    margin: 0 auto;     
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
@@ -777,6 +783,12 @@ footer::before {
     box-shadow: 0 5px 15px rgba(0,0,0,0.25);
 }
 
-.texto-contacto{
+.texto-contacto .subtitulo{
     color: #356235; 
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+.texto-contacto {
+    color: #1a1a1a;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+
 }
