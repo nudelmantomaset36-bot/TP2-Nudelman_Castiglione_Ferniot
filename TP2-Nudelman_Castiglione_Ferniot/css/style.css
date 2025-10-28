@@ -68,6 +68,18 @@ header {
     margin-bottom: 5px;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.header-logo {
+    height: 110px;
+    width: auto;
+    margin-left: 18px;
+    border-radius: 8px;
+    padding: 2px 4px;
 }
 
 .header-subtitle {
