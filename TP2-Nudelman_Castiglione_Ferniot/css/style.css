@@ -365,13 +365,29 @@ footer::before {
 
 .footer-nav {
     position: absolute;
-    right: 20px;
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     gap: 18px;
     align-items: center;
     margin: 0;
+    background: none;
+}
+.footer-nav a {
+    color: #91B3C4;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 8px;
+    transition: color 180ms ease, transform 180ms ease;
+    border-radius: 6px;
+}
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: var(--green-700);
+    transform: translateY(-2px);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 
@@ -392,6 +408,22 @@ footer::before {
     .logo { height: 30px; }
 }
 
+.footer-nav li {
+	list-style: none;
+	position: relative;
+}
+
+.footer-nav li::before {
+	content: "•";
+	color: rgba(53,98,53,0.45);
+	margin-right: 10px;
+	margin-left: 0;
+	font-size: 12px;
+}
+
+.footer-nav li:first-child::before {
+	margin-left: 0;
+}
 
 .footer-text {
     grid-column: 2;
@@ -407,13 +439,6 @@ footer::before {
 }
 
 
-.footer-nav {
-    grid-column: 3;
-    justify-self: end;
-    display: flex;
-    gap: 18px;
-    align-items: center;
-}
 .footer-icons {
     grid-column: 3;
     justify-self: end;
@@ -722,13 +747,29 @@ footer::before {
 
 .footer-nav {
     position: absolute;
-    right: 20px;
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     gap: 18px;
     align-items: center;
     margin: 0;
+    background: none;
+}
+.footer-nav a {
+    color: #91B3C4;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 8px;
+    transition: color 180ms ease, transform 180ms ease;
+    border-radius: 6px;
+}
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: var(--green-700);
+    transform: translateY(-2px);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 
