@@ -32,7 +32,7 @@
 					<p class="lead" >El Parque Nacional Lanín conserva una gran variedad de ambientes: bosques andino‑patagónicos, lagos y altas cumbres. Aquí mostramos una selección fotográfica representativa de su paisaje y especies.</p>
 				</div>
 
-				<!-- Gallery (reemplaza el carrusel) -->
+				
 				<div class="gallery-grid">
 					<div class="gallery-item">
 						<img src="../assets/imagenes/imagen1.jpg" alt="Bosque andino‑patagónico">
@@ -53,11 +53,11 @@
 				</div>
 			</div>
 
-			<!-- imagen lateral eliminada por completo -->
+			
 		</section>
 	</main>
 
-	<!-- footer unificado -->
+	
 	<footer>
 		<div class="footer-content">
 			<p class="footer-text">© 2025 Parque Nacional Lanín. Todos los derechos reservados.</p>
@@ -81,9 +81,7 @@
 		</div>
 	</footer>
 
-	<!-- CSS específico para la galería en naturaleza.html -->
 	<style>
-		/* Galería vertical: cada imagen una debajo de otra, ocupando ancho completo */
 		.informacion.naturaleza .gallery-grid {
 			display: flex;
 			flex-direction: column;
@@ -98,17 +96,17 @@
 			position: relative;
 			overflow: hidden;
 			border-radius: 12px;
-			background: transparent; /* sin fondo azul */
+			background: transparent;
 			box-shadow: 0 12px 30px rgba(0,0,0,0.06);
 		}
 		.informacion.naturaleza .gallery-item img {
 			width: 100%;
-			height: clamp(420px, 50vh, 800px); /* más alto visualmente */
+			height: clamp(420px, 50vh, 800px);
 			object-fit: cover;
 			display: block;
 			vertical-align: middle;
 		}
-		/* caption como overlay; si preferís debajo, lo puedo mover fácilmente */
+		
 		.informacion.naturaleza .gallery-caption {
 			position: absolute;
 			left: 12px;
@@ -123,7 +121,7 @@
 			font-size: 1rem;
 		}
 
-		/* Responsive: reducir altura en pantallas pequeñas */
+		
 		@media (max-width: 992px) {
 			.informacion.naturaleza .gallery-item img { height: clamp(320px, 42vh, 640px); }
 		}
@@ -133,22 +131,18 @@
 		}
 	</style>
 
-	<!-- Estilos locales para centrar todo en esta página -->
+
 	<style>
-		/* Centrar la sección principal y limitar ancho */
 		.informacion1 {
-			/* centro absoluto dentro del viewport (respeta header/footer) */
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			min-height: calc(100vh - 160px); /* ajusta según header/footer */
+			min-height: calc(100vh - 160px);
 			max-width: 1100px;
 			margin: 0 auto;
 			padding: 20px;
 			box-sizing: border-box;
 		}
-
-		/* Centrar el bloque de texto y ajustar anchos legibles */
 		.informacion1 .texto {
 			margin: 0 auto;
 			text-align: center;
@@ -166,7 +160,6 @@
 			text-align: center;
 		}
 
-		/* Imagen dentro del texto centrada y responsiva */
 		.informacion1 .parque-img {
 			display: block;
 			margin: 18px auto;
@@ -176,13 +169,11 @@
 			box-shadow: 0 8px 22px rgba(0,0,0,0.12);
 		}
 
-		/* Footer centrado (refuerzo local) */
 		footer .footer-content {
 			justify-content: center;
 			text-align: center;
 		}
 
-		/* Ajustes móviles */
 		@media (max-width: 768px) {
 			.informacion1 {
 				min-height: auto;

@@ -261,7 +261,7 @@ main {
     font-weight: bold;
     border-bottom: 3px solid #356235;
     padding-bottom: 8px;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    
 }
 
 .texto p {
@@ -269,7 +269,7 @@ main {
     font-size: 1em;
     line-height: 1.7;
     text-align: justify;
-    text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.8);
+    
     font-weight: 500;
 }
 
@@ -288,7 +288,6 @@ main {
 
 footer {
     background: transparent; 
-    backdrop-filter: blur(6px); 
     padding: 25px 0;
     border-top: none;
     position: relative;
@@ -380,7 +379,6 @@ footer::before {
     color: var(--green-700);
     font-size: 0.95em;
     font-weight: 500;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
     margin: 6px 0;
 }
 
@@ -496,7 +494,6 @@ footer::before {
     margin: 0 0 10px 0;
     letter-spacing: 1px;
     font-weight: 800;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
 }
 .informacion .texto-box .lead {
     color: #1a1a1a;
@@ -530,13 +527,11 @@ footer::before {
     font-weight: bold;
     border-bottom: 3px solid #356235;
     padding-bottom: 8px;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
     text-align: left; 
 }
 
 .informacion.naturaleza .texto .texto-box .lead {
     color: #1a1a1a;
-    text-shadow: #91B3C4;
     
 }
 
@@ -632,7 +627,6 @@ footer::before {
     border: none !important;
     box-shadow: none !important;
     color: #1a1a1a; 
-    text-shadow: 0 1 0 #91B3C4 ;
     border-radius: 16px;
 }
 
@@ -676,12 +670,9 @@ footer::before {
 }
 .informacion.naturaleza .texto-box .lead {
     color: #1a1a1a;
-    text-shadow: 0 1 0 #fdfeff;
+    
 }
 
-.informacion.naturaleza .texto-box h2 {
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-}
 
 
 .footer-content {
@@ -749,7 +740,6 @@ footer::before {
 .historia h2 {
     margin-bottom: 15px;
     color: #356235; 
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
 }
 
 
@@ -758,7 +748,6 @@ footer::before {
     line-height: 1.6;
     margin-bottom: 25px; 
     color: #161616; 
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
 }
 
 
@@ -782,10 +771,8 @@ footer::before {
 
 .texto-contacto .subtitulo{
     color: #356235; 
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
 }
 .texto-contacto {
     color: #1a1a1a;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
 
 }
